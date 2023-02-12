@@ -17,10 +17,8 @@ function getPlayerChoice() {
 }
 
 function rps(computer, player) {
-  let quit = false;
-  let result;
-
-  while (!quit) {
+  for (let i = 1; i <= 5; i++) {
+    let result;
     let playerChoice = getPlayerChoice();
     let computerChoice = getComputerChoice();
 
@@ -46,15 +44,13 @@ function rps(computer, player) {
       result = "Invalid input";
     }
     console.log(result);
-
-    let playAgain = prompt("Would you like to play again?");
-    if (playAgain.toLowerCase() === "yes") {
-      console.log("");
-      quit = false;
-    } else {
-      quit = true;
-    }
   }
+  console.log(" ");
+  console.log("Game over! ");
+}
+
+function game() {
+  rps();
 }
 
 /*
